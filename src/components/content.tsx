@@ -88,8 +88,8 @@ export default function Content() {
                 </div>
             </div>
 
-            <div className="flex flex-col gap-y-1">
-                <h3 className="mb-6 text-md text-neutral-200 font-semibold">{translations[language].contactTitle}</h3>
+            <div className="flex flex-col gap-y-6">
+                <h3 className="text-md text-neutral-200 font-semibold">{translations[language].contactTitle}</h3>
                 <div className="flex flex-col items-start">
                     <CopyMail language={language} />
                     <p className="flex items-center gap-x-2 mt-2">

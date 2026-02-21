@@ -34,9 +34,9 @@ export default function CopyMail({ language }: props) {
 
             </button>
 
-            <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded ml-1 px-2 py-1 text-xs text-neutral-200 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+            {/* <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded ml-1 px-2 py-1 text-xs text-neutral-200 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                 {language === "en" ? "Copy e-mail" : "Copiar e-mail"}
-            </span>
+            </span> */}
 
         </div>
     );
