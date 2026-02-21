@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, GithubIcon, Slash } from "lucide-react";
+import { ArrowUpRight, Slash } from "lucide-react";
 import CopyMail from "./copy-mail";
 import Projects from "./projects";
 import { useState } from "react";
@@ -9,13 +9,12 @@ export default function Content() {
 
     const [language, setLanguage] = useState<"en" | "pt">("en");
 
-
     type Language = "en" | "pt";
 
     const translations: Record<Language, {
         projects: string; now: string; contactTitle: string;
         contact: string; description: string; currently: string; goal: string
-        cardlyDescription: string; kubshDescription: string; instapixDescription: string
+        cardlyDescription: string; cardlyStacks: string; kubshDescription: string; kubshStacks: string; instapixDescription: string; instapixStacks: string
     }> = {
         en: {
             projects: "Projects that i've worked on",
@@ -25,8 +24,11 @@ export default function Content() {
             currently: "Currently focused on building new projects and expanding my knowledge while pursuing my degree. Always learning and improving through hands-on experience.",
             goal: "My goal is to create full-stack applications and charming web experiences driven by creativity and strong visual design. I enjoy turning ideas into real products and building experiences that are both functional and visually appealing.",
             cardlyDescription: "Send meaningful digital cards to anyone, anytime.",
+            cardlyStacks: "React Native, Expo, Adonis and Tailwind CSS.",
             kubshDescription: "Fast, free, and privacy-focused URL shortening service.",
+            kubshStacks: "React, Next.js, Adonis and Tailwind CSS.",
             instapixDescription: "Simple and secure Pix payments for livestreamers.",
+            instapixStacks: "React, Next.js, Adonis and Tailwind CSS.",
             contact: "Reach me at: "
         },
         pt: {
@@ -37,8 +39,11 @@ export default function Content() {
             currently: "Focado em construir novos projetos e expandir meu conhecimento enquanto curso a faculdade de Análise e Desenvolvimento de Sistemas. Sempre tentando aprender e melhorar cada vez mais através de novas experiências.",
             goal: "Meu objetivo é criar aplicações full-stack e experiências modernas e bem arquitetadas, guiadas pela criatividade e um forte design visual. Gosto de transformar ideias em produtos reais e construir experiências que sejam funcionais e visualmente atraentes.",
             cardlyDescription: "Envie cartões digitais significativos para qualquer pessoa, a qualquer momento.",
+            cardlyStacks: "React Native, Expo, Adonis e Tailwind CSS.",
             kubshDescription: "Serviço rápido, gratuito e focado na privacidade para encurtar URLs.",
+            kubshStacks: "React, Next.js, Adonis e Tailwind CSS.",
             instapixDescription: "Pagamentos Pix simples e seguros para streamers.",
+            instapixStacks: "React, Next.js, Adonis e Tailwind CSS.",
             contact: "Entre em contato: "
         }
     };
@@ -63,34 +68,39 @@ export default function Content() {
                         <span className="hover:text-neutral-200 hover:underline cursor-pointer underline-offset-2" onClick={() => setLanguage("pt")} style={{ textDecoration: language === "pt" ? "underline" : "none", color: language === "pt" ? "#e5e5e5" : "#71717a" }}>PT</span>
                     </div>
                 </div>
-                <h2>{translations[language].description}</h2>
+                <h2 className="text-neutral-200">{translations[language].description}</h2>
             </div>
 
-            <div className="flex flex-col gap-y-1">
-                <h3 className="mb-2 text-md text-neutral-400">{translations[language].projects}</h3>
+            <div className="flex flex-col gap-y-6">
+                <h3 className="text-md text-neutral-200 font-semibold">{translations[language].projects}</h3>
                 <div className="flex flex-col sm:flex-row md:flex-row gap-y-3 md:gap-x-3 justify-between">
-                    <Projects title="Cardly" description={translations[language].cardlyDescription} />
-                    <Projects title="InstaPix" description={translations[language].instapixDescription} />
-                    <Projects title="Kub.sh" description={translations[language].kubshDescription} />
+                    <Projects title="Cardly" description={translations[language].cardlyDescription} stacks={translations[language].cardlyStacks} />
+                    <Projects title="InstaPix" description={translations[language].instapixDescription} stacks={translations[language].instapixStacks} />
+                    <Projects title="Kub.sh" description={translations[language].kubshDescription} stacks={translations[language].kubshStacks} />
                 </div>
             </div>
 
-            <div className="flex flex-col gap-y-1">
-                <h3 className="mb-4 text-md text-neutral-400">{translations[language].now}</h3>
-                <div className="flex flex-col gap-y-6">
+            <div className="flex flex-col gap-y-6">
+                <h3 className="text-md text-neutral-200 font-semibold">{translations[language].now}</h3>
+                <div className="flex flex-col gap-y-6 text-neutral-200">
                     <p>{translations[language].currently}</p>
                     <p>{translations[language].goal}</p>
                 </div>
             </div>
 
             <div className="flex flex-col gap-y-1">
-                <h3 className="mb-6 text-md text-neutral-400">{translations[language].contactTitle}</h3>
+                <h3 className="mb-6 text-md text-neutral-200 font-semibold">{translations[language].contactTitle}</h3>
                 <div className="flex flex-col items-start">
-                    <CopyMail />
-                    <p className="flex items-center gap-x-2 mt-2"><a style={{ display: "flex", alignItems: "center", gap: "0.25rem" }} href="https://github.com/leonardonasc" target="_blank" className="hover:underline underline-offset-2">github <ArrowUpRight size={12} /></a></p>
+                    <CopyMail language={language} />
+                    <p className="flex items-center gap-x-2 mt-2">
+                        <a
+                            style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}
+                            href="https://github.com/leonardonasc" target="_blank" className="hover:underline decoration-neutral-600 underline-offset-4">
+                            github <ArrowUpRight size={16} className="text-neutral-400 underline-offset-3" />
+                        </a>
+                    </p>
                 </div>
             </div>
-
         </div>
     )
 }

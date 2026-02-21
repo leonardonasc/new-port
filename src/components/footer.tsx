@@ -12,7 +12,7 @@ export default function Footer() {
             font-mono text-sm">
                 <span className="">2026</span>
                 <div className="flex gap-x-1">
-                    Santa Catarina, Brasil <Minus size={20} /> <TextClock />
+                    Brasil <Minus size={20} /> <TextClock />
                 </div>
             </div>
 
