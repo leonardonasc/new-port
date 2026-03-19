@@ -110,7 +110,7 @@ export default function Content() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
-            className="flex flex-col gap-y-6">
+                className="flex flex-col gap-y-6">
                 <h3 className="text-md text-neutral-200 font-semibold">{translations[language].contactTitle}</h3>
                 <div className="flex flex-col items-start">
                     <CopyMail language={language} />
@@ -119,6 +119,13 @@ export default function Content() {
                             style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}
                             href="https://github.com/leonardonasc" target="_blank" className="hover:underline decoration-neutral-600 underline-offset-4">
                             github <ArrowUpRight size={16} className="text-neutral-400 underline-offset-3" />
+                        </a>
+                    </p>
+                    <p className="flex items-center gap-x-2 mt-2">
+                        <a
+                            style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}
+                            href="https://www.linkedin.com/in/leonardownascimento" target="_blank" className="hover:underline decoration-neutral-600 underline-offset-4">
+                            linkedin <ArrowUpRight size={16} className="text-neutral-400 underline-offset-3" />
                         </a>
                     </p>
                 </div>
