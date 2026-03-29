@@ -1,0 +1,30 @@
+{
+  "description": "Full Stack Developer. Crafting beautiful, scalable websites and applications. Always seeking new challenges and continuous growth.",
+  "projects": {
+    "title": "Projects that i've worked on",
+    "cardly": {
+      "description": "Send meaningful digital cards to anyone, anytime.",
+      "stacks": "React Native, Expo Go, AdonisJS and Tailwind CSS."
+    },
+    "kubsh": {
+      "description": "Fast, free, and privacy-focused URL shortening service.",
+      "stacks": "React, Next.js, AdonisJS and Tailwind CSS."
+    },
+    "instapix": {
+      "description": "Simple and secure Pix payments for livestreamers.",
+      "stacks": "React, Next.js, AdonisJS and Tailwind CSS."
+    },
+    "defante": {
+      "description": "A simple landing page for a youtuber focused on content creation.",
+      "stacks": "React, Next.js and Tailwind CSS."
+    }
+  },
+  "about": {
+    "currently": "Currently focused on building new projects and expanding my knowledge while pursuing my degree. Always learning and improving through hands-on experience.",
+    "goal": "My goal is to create full-stack applications and charming web experiences driven by creativity and strong visual design. I enjoy turning ideas into real products and building experiences that are both functional and visually appealing."
+  },
+  "contact": {
+    "title": "Contact",
+    "message": "Reach me at: "
+  }
+}

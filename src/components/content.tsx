@@ -1,53 +1,15 @@
 "use client";
 
-import { ArrowUpRight, Slash } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import CopyMail from "./copy-mail";
 import Projects from "./projects";
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 export default function Content() {
-
-    const [language, setLanguage] = useState<"en" | "pt">("en");
-
-    type Language = "en" | "pt";
-
-    const translations: Record<Language, {
-        projects: string; now: string; contactTitle: string;
-        contact: string; description: string; currently: string; goal: string
-        cardlyDescription: string; cardlyStacks: string; kubshDescription: string; kubshStacks: string; instapixDescription: string; instapixStacks: string
-    }> = {
-        en: {
-            projects: "Projects that i've worked on",
-            now: "Now",
-            contactTitle: "Contact",
-            description: "Full Stack Developer. Crafting beautiful, scalable websites and applications. Always seeking new challenges and continuous growth.",
-            currently: "Currently focused on building new projects and expanding my knowledge while pursuing my degree. Always learning and improving through hands-on experience.",
-            goal: "My goal is to create full-stack applications and charming web experiences driven by creativity and strong visual design. I enjoy turning ideas into real products and building experiences that are both functional and visually appealing.",
-            cardlyDescription: "Send meaningful digital cards to anyone, anytime.",
-            cardlyStacks: "React Native, Expo Go, AdonisJS and Tailwind CSS.",
-            kubshDescription: "Fast, free, and privacy-focused URL shortening service.",
-            kubshStacks: "React, Next.js, AdonisJS and Tailwind CSS.",
-            instapixDescription: "Simple and secure Pix payments for livestreamers.",
-            instapixStacks: "React, Next.js, AdonisJS and Tailwind CSS.",
-            contact: "Reach me at: "
-        },
-        pt: {
-            projects: "Projetos que eu já trabalhei",
-            now: "Atualmente",
-            contactTitle: "Contato",
-            description: "Desenvolvedor Full Stack focado na criação de aplicações escaláveis, performáticas e visualmente atraentes. Sempre em busca de novos desafios e aprendizado contínuo.",
-            currently: "Focado em construir novos projetos e expandir meu conhecimento enquanto curso a faculdade de Análise e Desenvolvimento de Sistemas. Sempre tentando aprender e melhorar cada vez mais através de novas experiências.",
-            goal: "Meu objetivo é criar aplicações full-stack e experiências modernas e bem arquitetadas, guiadas pela criatividade e um forte design visual. Gosto de transformar ideias em produtos reais e construir experiências que sejam funcionais e visualmente atraentes.",
-            cardlyDescription: "Envie cartões digitais significativos para qualquer pessoa, a qualquer momento.",
-            cardlyStacks: "React Native, Expo Go, AdonisJS e Tailwind CSS.",
-            kubshDescription: "Serviço rápido, gratuito e focado na privacidade para encurtar URLs.",
-            kubshStacks: "React, Next.js, AdonisJS e Tailwind CSS.",
-            instapixDescription: "Pagamentos Pix simples e seguros para streamers.",
-            instapixStacks: "React, Next.js, AdonisJS e Tailwind CSS.",
-            contact: "Entre em contato: "
-        }
-    };
+    const t = useTranslations();
+    const locale = useLocale();
 
     return (
         <motion.div
@@ -71,14 +33,20 @@ export default function Content() {
                     className="flex justify-between items-center">
                     <h1 className="font-semibold text-neutral-200">Leonardo Nascimento</h1>
                     <div className="flex gap-x-2 text-neutral-500 items-center text-sm">
-                        <span className="hover:text-neutral-200 hover:underline cursor-pointer underline-offset-2" onClick={() => setLanguage("en")}
-                            style={{ textDecoration: language === "en" ? "underline" : "none", color: language === "en" ? "#e5e5e5" : "#71717a" }}
-                        >EN</span>
-                        <Slash size={14} />
-                        <span className="hover:text-neutral-200 hover:underline cursor-pointer underline-offset-2" onClick={() => setLanguage("pt")} style={{ textDecoration: language === "pt" ? "underline" : "none", color: language === "pt" ? "#e5e5e5" : "#71717a" }}>PT</span>
+                        <a
+                            href="/en"
+                            className="hover:text-neutral-200 hover:underline cursor-pointer underline-offset-2"
+                            style={{ textDecoration: locale === "en" ? "underline" : "none", color: locale === "en" ? "#e5e5e5" : "#71717a" }}
+                        >EN</a>
+                        <span>/</span>
+                        <a
+                            href="/pt"
+                            className="hover:text-neutral-200 hover:underline cursor-pointer underline-offset-2"
+                            style={{ textDecoration: locale === "pt" ? "underline" : "none", color: locale === "pt" ? "#e5e5e5" : "#71717a" }}
+                        >PT</a>
                     </div>
                 </div>
-                <h2 className="text-neutral-200">{translations[language].description}</h2>
+                <h2 className="text-neutral-200">{t("description")}</h2>
             </motion.div>
 
             <motion.div
@@ -86,11 +54,29 @@ export default function Content() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.4 }}
                 className="flex flex-col gap-y-6">
-                <h3 className="text-md text-neutral-200 font-semibold">{translations[language].projects}</h3>
+                <h3 className="text-md text-neutral-200 font-semibold">{t("projects.title")}</h3>
                 <div className="flex flex-col sm:flex-row md:flex-row gap-y-3 md:gap-x-3 justify-between">
-                    <Projects title="Cardly" description={translations[language].cardlyDescription} stacks={translations[language].cardlyStacks} />
-                    <Projects title="InstaPix" description={translations[language].instapixDescription} stacks={translations[language].instapixStacks} />
-                    <Projects title="Kub.sh" description={translations[language].kubshDescription} stacks={translations[language].kubshStacks} />
+                    <Projects
+                        title="Cardly"
+                        description={t("projects.cardly.description")}
+                        stacks={t("projects.cardly.stacks")}
+                        where="BluePaper"
+                        whereLink="https://bluepaper.io/"
+                    />
+                    <Projects
+                        title="InstaPix"
+                        description={t("projects.instapix.description")}
+                        stacks={t("projects.instapix.stacks")}
+                        where="BluePaper"
+                        whereLink="https://bluepaper.io/"
+                    />
+                    <Projects
+                        title="Defante Landing"
+                        description={t("projects.defante.description")}
+                        stacks={t("projects.defante.stacks")}
+                        where="Defante"
+                        whereLink="https://www.defante.com.br/"
+                    />
                 </div>
             </motion.div>
 
@@ -99,10 +85,10 @@ export default function Content() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.6 }}
                 className="flex flex-col gap-y-6">
-                <h3 className="text-md text-neutral-200 font-semibold">{translations[language].now}</h3>
+                <h3 className="text-md text-neutral-200 font-semibold">{t("contact.title")}</h3>
                 <div className="flex flex-col gap-y-6 text-neutral-200">
-                    <p>{translations[language].currently}</p>
-                    <p>{translations[language].goal}</p>
+                    <p>{t("about.currently")}</p>
+                    <p>{t("about.goal")}</p>
                 </div>
             </motion.div>
 
@@ -111,9 +97,9 @@ export default function Content() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
                 className="flex flex-col gap-y-6">
-                <h3 className="text-md text-neutral-200 font-semibold">{translations[language].contactTitle}</h3>
+                <h3 className="text-md text-neutral-200 font-semibold">{t("contact.title")}</h3>
                 <div className="flex flex-col items-start">
-                    <CopyMail language={language} />
+                    <CopyMail />
                     <p className="flex items-center gap-x-2 mt-2">
                         <a
                             style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}

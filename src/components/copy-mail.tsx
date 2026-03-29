@@ -2,12 +2,10 @@
 
 import { Copy } from "lucide-react";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
-interface props {
-    language: "en" | "pt";
-}
-
-export default function CopyMail({ language }: props) {
+export default function CopyMail() {
+    const t = useTranslations();
     const [copy, setCopy] = useState(false);
 
     const user = "leonardo.nasmt";
@@ -27,10 +25,14 @@ export default function CopyMail({ language }: props) {
                 className="hover:cursor-pointer flex items-center"
                 aria-label="Copy email"
             >
-                <span className="underline-offset-3 hover:underline decoration-neutral-600 decoration-1 flex gap-x-2 items-center"><p>email {language === "en" ? "(click to copy)" : "(clique para copiar)"}
-                </p> <Copy className="text-white" style={{
-                    color: copy ? "#22c55e" : "#f1f1f1"
-                }} size={12} /></span>
+                <span className="underline-offset-3 hover:underline decoration-neutral-600 decoration-1 flex gap-x-2 items-center">
+                    <p>
+                        email ({copy ? (t("contact.title") === "Contact" ? "copied!" : "copiado!") : (t("contact.title") === "Contact" ? "click to copy" : "clique para copiar")})
+                    </p>
+                    <Copy className="text-white" style={{
+                        color: copy ? "#22c55e" : "#f1f1f1"
+                    }} size={12} />
+                </span>
 
             </button>
 
