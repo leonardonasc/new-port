@@ -7,7 +7,7 @@ export function TextClock() {
 
   useEffect(() => {
     const update = () =>
-      setTime(new Date().toLocaleTimeString("en-US"))
+      setTime(new Date().toLocaleTimeString("en-US", { timeZone: "America/Sao_Paulo" }))
 
     update()
     const interval = setInterval(update, 1000)
