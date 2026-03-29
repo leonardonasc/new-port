@@ -16,14 +16,14 @@ export default function Content() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="xs:w-full
-                        sm:w-full
-                        md:w-175
-                        lg:w-175
-                        xl:w-175
-                        2xl:w-175
-        min-h-screen flex flex-col gap-y-15 py-25 px-10 sm:px-20 md:px-0 lg:px-0 xl:px-0 2xl:px-0 line-clamp-2 text-neutral-300 leading-6">
-
+            className="xs:w-full 
+                    sm:w-full sm:px-20
+                    md:w-175 md:px-0
+                    lg:w-175 lg:px-0
+                    xl:w-175 xl:px-0
+                    2xl:w-175 2xl:px-0
+                    min-h-screen flex flex-col gap-y-15 py-25 px-10 line-clamp-2 text-neutral-300 leading-6"
+        >
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -100,8 +100,6 @@ export default function Content() {
                     <p>{t("about.goal")}</p>
                 </div>
             </motion.div>
-
-
         </motion.div>
     )
 }
