@@ -26,20 +26,11 @@ export default function CopyMail() {
                 aria-label="Copy email"
             >
                 <span className="underline-offset-3 hover:underline decoration-neutral-600 decoration-1 flex gap-x-2 items-center">
-                    <p>
-                        email ({copy ? (t("contact.title") === "Contact" ? "copied!" : "copiado!") : (t("contact.title") === "Contact" ? "click to copy" : "clique para copiar")})
+                    <p className="underline">
+                        {copy ? (t("contact.title") === "Contact" ? "copied to clipboard" : "copiado") : ('email')}
                     </p>
-                    <Copy className="text-white" style={{
-                        color: copy ? "#22c55e" : "#f1f1f1"
-                    }} size={12} />
                 </span>
-
             </button>
-
-            {/* <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded ml-1 px-2 py-1 text-xs text-neutral-200 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                {language === "en" ? "Copy e-mail" : "Copiar e-mail"}
-            </span> */}
-
         </div>
     );
 }

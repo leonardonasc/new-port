@@ -18,14 +18,13 @@
       "description": "Uma landing page simples para um youtuber focado em criação de conteúdo.",
       "stacks": "React, Next.js e Tailwind CSS."
     }
-
   },
   "about": {
-    "currently": "Focado em construir novos projetos e expandir meu conhecimento enquanto curso a faculdade de Análise e Desenvolvimento de Sistemas. Sempre tentando aprender e melhorar cada vez mais através de novas experiências.",
+    "title": "Por agora",
+    "currently": "Focando em construir novos projetos e expandir meu conhecimento enquanto curso a faculdade de Análise e Desenvolvimento de Sistemas. Sempre tentando aprender e melhorar cada vez mais através de novas experiências.",
     "goal": "Meu objetivo é criar aplicações full-stack e experiências modernas e bem arquitetadas, guiadas pela criatividade e um forte design visual. Gosto de transformar ideias em produtos reais e construir experiências que sejam funcionais e visualmente atraentes."
   },
   "contact": {
-    "title": "Contato",
-    "message": "Entre em contato: "
+    "title": "Fico à disposição em"
   }
 }

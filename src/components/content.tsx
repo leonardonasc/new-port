@@ -52,7 +52,16 @@ export default function Content() {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.4 }}
+                transition={{ duration: 1, delay: 0.4 }}>
+                <div className="flex gap-x-1 items-start">
+                    <p>{t("contact.title")}:</p> <CopyMail />.
+                </div>
+            </motion.div>
+
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.6 }}
                 className="flex flex-col gap-y-6">
                 <h3 className="text-md text-neutral-200 font-semibold">{t("projects.title")}</h3>
                 <div className="flex flex-col sm:flex-row md:flex-row gap-y-3 md:gap-x-3 justify-between">
@@ -64,31 +73,19 @@ export default function Content() {
                         whereLink="https://bluepaper.io/"
                     />
                     <Projects
-                        title="InstaPix"
-                        description={t("projects.instapix.description")}
-                        stacks={t("projects.instapix.stacks")}
-                        where="BluePaper"
-                        whereLink="https://bluepaper.io/"
-                    />
-                    <Projects
                         title="Defante Landing"
                         description={t("projects.defante.description")}
                         stacks={t("projects.defante.stacks")}
                         where="Defante"
                         whereLink="https://www.defante.com.br/"
                     />
-                </div>
-            </motion.div>
-
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.6 }}
-                className="flex flex-col gap-y-6">
-                <h3 className="text-md text-neutral-200 font-semibold">{t("contact.title")}</h3>
-                <div className="flex flex-col gap-y-6 text-neutral-200">
-                    <p>{t("about.currently")}</p>
-                    <p>{t("about.goal")}</p>
+                    <Projects
+                        title="InstaPix"
+                        description={t("projects.instapix.description")}
+                        stacks={t("projects.instapix.stacks")}
+                        where="BluePaper"
+                        whereLink="https://bluepaper.io/"
+                    />
                 </div>
             </motion.div>
 
@@ -97,25 +94,14 @@ export default function Content() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
                 className="flex flex-col gap-y-6">
-                <h3 className="text-md text-neutral-200 font-semibold">{t("contact.title")}</h3>
-                <div className="flex flex-col items-start">
-                    <CopyMail />
-                    <p className="flex items-center gap-x-2 mt-2">
-                        <a
-                            style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}
-                            href="https://github.com/leonardonasc" target="_blank" className="hover:underline decoration-neutral-600 underline-offset-4">
-                            github <ArrowUpRight size={16} className="text-neutral-400 underline-offset-3" />
-                        </a>
-                    </p>
-                    <p className="flex items-center gap-x-2 mt-2">
-                        <a
-                            style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}
-                            href="https://www.linkedin.com/in/leonardownascimento" target="_blank" className="hover:underline decoration-neutral-600 underline-offset-4">
-                            linkedin <ArrowUpRight size={16} className="text-neutral-400 underline-offset-3" />
-                        </a>
-                    </p>
+                <h3 className="text-md text-neutral-200 font-semibold">{t("about.title")}</h3>
+                <div className="flex flex-col gap-y-6 text-neutral-200">
+                    <p>{t("about.currently")}</p>
+                    <p>{t("about.goal")}</p>
                 </div>
             </motion.div>
+
+
         </motion.div>
     )
 }

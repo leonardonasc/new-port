@@ -28,7 +28,7 @@ export default function Projects({ title, description, where, whereLink, stacks 
 
             <div className="flex justify-between items-start">
                 <div className="gap-x-2 flex flex-col">
-                    <h1 className="text-md decoration-neutral-600">{title}</h1>
+                    <h1 className="text-sm font-semibold decoration-neutral-600">{title}</h1>
                     <a href={whereLink} target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground underline underline-offset-2 flex gap-x-2 items-center">
                         {where} <ExternalLink size={12} className="inline-block text-neutral-400" />
                     </a>
