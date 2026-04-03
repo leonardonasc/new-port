@@ -1,6 +1,4 @@
-import { useState } from "react";
-import { DropdownMenuSeparator } from "./ui/dropdown-menu";
-import { ChevronDown, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface ProjectsProps {

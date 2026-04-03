@@ -1,6 +1,5 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
 import CopyMail from "./copy-mail";
 import Projects from "./projects";
 import { motion } from "framer-motion";
@@ -46,7 +45,9 @@ export default function Content() {
                         >PT</a>
                     </div>
                 </div>
-                <h2 className="text-neutral-200">{t("description")}</h2>
+                <h2 className="text-neutral-200">{t.rich("description", {
+                    span: (chunks) => <span className="text-neutral-100">{chunks}</span>
+                })}</h2>
             </motion.div>
 
             <motion.div
