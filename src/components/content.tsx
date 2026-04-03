@@ -18,10 +18,10 @@ export default function Content() {
             transition={{ duration: 1 }}
             className="xs:w-full 
                     sm:w-full sm:px-20
-                    md:w-175 md:px-0
-                    lg:w-175 lg:px-0
-                    xl:w-175 xl:px-0
-                    2xl:w-175 2xl:px-0
+                    md:w-180 md:px-0
+                    lg:w-180 lg:px-0
+                    xl:w-180 xl:px-0
+                    2xl:w-180 2xl:px-0
                     min-h-screen flex flex-col gap-y-15 py-25 px-10 line-clamp-2 text-neutral-300 leading-6"
         >
             <motion.div
@@ -97,7 +97,6 @@ export default function Content() {
                 <h3 className="text-md text-neutral-200 font-semibold">{t("about.title")}</h3>
                 <div className="flex flex-col gap-y-6 text-neutral-200">
                     <p>{t("about.currently")}</p>
-                    <p>{t("about.goal")}</p>
                 </div>
             </motion.div>
         </motion.div>

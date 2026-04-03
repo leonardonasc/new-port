@@ -1,30 +1,25 @@
 {
-  "description": "Desenvolvedor Full Stack focado na criação de aplicações escaláveis, performáticas e visualmente atraentes. Sempre em busca de novos desafios e aprendizado contínuo.",
+  "description": "Desenvolvedor Full Stack focado em criar aplicações modernas, escaláveis e bem construídas, unindo performance, experiência do usuário e design visual.",
   "projects": {
-    "title": "Projetos que eu já trabalhei",
+    "title": "Projetos que desenvolvi",
     "cardly": {
-      "description": "Envie cartões digitais significativos para qualquer pessoa, a qualquer momento.",
+      "description": "Plataforma mobile para criar e compartilhar cartões digitais personalizados.",
       "stacks": "React Native, Expo Go, AdonisJS e Tailwind CSS."
-    },
-    "kubsh": {
-      "description": "Serviço rápido, gratuito e focado na privacidade para encurtar URLs.",
-      "stacks": "React, Next.js, AdonisJS e Tailwind CSS."
     },
     "instapix": {
       "description": "Pagamentos Pix simples e seguros para streamers.",
       "stacks": "React, Next.js, AdonisJS e Tailwind CSS."
     },
     "defante": {
-      "description": "Uma landing page simples para um youtuber focado em criação de conteúdo.",
+      "description": "Landing page para um criador de conteúdo com foco em presença digital.",
       "stacks": "React, Next.js e Tailwind CSS."
     }
   },
   "about": {
-    "title": "Por agora",
-    "currently": "Focando em construir novos projetos e expandir meu conhecimento enquanto curso a faculdade de Análise e Desenvolvimento de Sistemas. Sempre tentando aprender e melhorar cada vez mais através de novas experiências.",
-    "goal": "Meu objetivo é criar aplicações full-stack e experiências modernas e bem arquitetadas, guiadas pela criatividade e um forte design visual. Gosto de transformar ideias em produtos reais e construir experiências que sejam funcionais e visualmente atraentes."
+    "title": "Atualmente",
+    "currently": "Estou focado em desenvolver novos projetos e evoluir tecnicamente em desenvolvimento full stack enquanto curso Análise e Desenvolvimento de Sistemas."
   },
   "contact": {
-    "title": "Fico à disposição"
+    "title": "Entre em contato"
   }
 }

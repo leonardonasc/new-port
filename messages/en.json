@@ -1,30 +1,25 @@
 {
-  "description": "Full Stack Developer. Crafting beautiful, scalable websites and applications. Always seeking new challenges and continuous growth.",
+  "description": "Full Stack Developer focused on building modern, scalable, and well-crafted applications, combining performance, user experience, and visual design.",
   "projects": {
-    "title": "Projects that i've worked on",
+    "title": "Projects I've Built",
     "cardly": {
-      "description": "Send meaningful digital cards to anyone, anytime.",
-      "stacks": "React Native, Expo Go, AdonisJS and Tailwind CSS."
-    },
-    "kubsh": {
-      "description": "Fast, free, and privacy-focused URL shortening service.",
-      "stacks": "React, Next.js, AdonisJS and Tailwind CSS."
+      "description": "Mobile platform for creating and sharing personalized digital cards.",
+      "stacks": "React Native, Expo Go, AdonisJS, and Tailwind CSS."
     },
     "instapix": {
-      "description": "Simple and secure Pix payments for livestreamers.",
-      "stacks": "React, Next.js, AdonisJS and Tailwind CSS."
+      "description": "Simple and secure Pix payments for streamers.",
+      "stacks": "React, Next.js, AdonisJS, and Tailwind CSS."
     },
     "defante": {
-      "description": "A simple landing page for a youtuber focused on content creation.",
-      "stacks": "React, Next.js and Tailwind CSS."
+      "description": "Landing page for a content creator focused on digital presence.",
+      "stacks": "React, Next.js, and Tailwind CSS."
     }
   },
   "about": {
     "title": "Currently",
-    "currently": "Focused on building new projects and expanding my knowledge while pursuing my degree. Always learning and improving through hands-on experience.",
-    "goal": "My goal is to create full-stack applications and charming web experiences driven by creativity and strong visual design. I enjoy turning ideas into real products and building experiences that are both functional and visually appealing."
+    "currently": "I'm focused on building new projects and growing technically in full stack development while pursuing a degree in Systems Analysis and Development."
   },
   "contact": {
-    "title": "Reach me at"
+    "title": "Get in Touch"
   }
 }
