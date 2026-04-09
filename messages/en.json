@@ -1,5 +1,8 @@
 {
-  "description": "<span>Full Stack Developer</span> focused on building modern, scalable, and well-crafted applications, combining performance, user experience, and visual design.",
+  "description": "I’m a <span>Full Stack Developer</span> focused on building modern, scalable, and well-structured web and mobile applications. I have hands-on experience with both frontend and backend development, creating responsive interfaces, management systems, and digital products with a focus on performance, clean code, and user experience.",
+  "contact": {
+    "title": "Reach out"
+  },
   "projects": {
     "title": "Projects I've Built",
     "cardly": {
@@ -15,11 +18,21 @@
       "stacks": "React, Next.js, and Tailwind CSS."
     }
   },
-  "about": {
-    "title": "Currently",
-    "currently": "I'm focused on building new projects and growing technically in full stack development while pursuing a degree in Systems Analysis and Development."
+  "education": {
+    "title": "Education",
+    "degree": "Systems Analysis and Development, Estácio de Sá University",
+    "degreeDate": "2026 - Present",
+    "course": "Technical Course in Systems Development, SENAI",
+    "courseDate": "2019 - 2021",
+    "country": "Santa Catarina, BR",
+    "oracle": "Oracle Next Education (ONE), Alura and Oracle",
+    "oracleDate": "2024"
   },
-  "contact": {
-    "title": "Get in Touch"
+  "experience": {
+    "title": "Experience",
+    "company": "BluePaper",
+    "role": "Full Stack Developer",
+    "duration": "Sep 2024 - Dec 2025",
+    "description": "1 year and 4 months of experience developing modern web pages and mobile applications, with hands-on work across both frontend and backend development. Built responsive interfaces, management systems, and custom digital products using advanced market technologies such as Next.js, Tailwind CSS, AdonisJS, MySQL, and Expo, always focusing on performance, clean structure, and user experience."
   }
 }

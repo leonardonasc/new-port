@@ -25,10 +25,10 @@ export default function CopyMail() {
                 className="hover:cursor-pointer flex items-center"
                 aria-label="Copy email"
             >
-                <span className="underline-offset-3 hover:underline decoration-neutral-600 decoration-1 flex gap-x-2 items-center">
-                    <p className="underline">
-                        {copy ? (t("contact.title") === "Contact" ? "copied to clipboard" : "copiado") : ('email')}
-                    </p>
+                <span className="underline-offset-1 hover:underline decoration-zinc-400 decoration-1 flex gap-x-2 items-center">
+                    <div className="underline text-sm font-semibold text-zinc-400">
+                        {copy ? (t("contact.title") === "Reach out" ? "copied to clipboard" : "copiado") : ('email')}
+                    </div>
                 </span>
             </button>
         </div>
