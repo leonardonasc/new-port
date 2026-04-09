@@ -99,9 +99,8 @@ export default function Content() {
 
                         <div className="flex gap-x-1 text-sm">
                             <p className="font-semibold">{t("experience.role")}</p>
-                            <p className="text-neutral-500">at</p>
                             <a href="https://bluepaper.io/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground underline underline-offset-1 flex gap-x-2 items-center">
-                                <p className="text-zinc-400">{t("experience.company")}</p>
+                                <p className="text-zinc-400">@{t("experience.company")}</p>
                             </a>
                         </div>
                     </div>
