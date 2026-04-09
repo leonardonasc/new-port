@@ -144,17 +144,17 @@ export default function Content() {
                 <div className="flex gap-y-6 gap-x-6 text-sm text-neutral-500">
                     <div className="flex-col">
                         <p>HTML5 / CSS</p>
-                        <p>JavaScript</p>
                         <p>TypeScript</p>
                         <p>React</p>
-                        <p>Next.js</p>
+                        <p>AdonisJS</p>
+                        <p>Android Studio</p>
                     </div>
                     <div className="flex-col">
-                        <p>Tailwind CSS</p>
                         <p>Git / GitHub</p>
-                        <p>Android Studio</p>
-                        <p>Framer Motion</p>
-                        <p>Vercel</p>
+                        <p>Tailwind CSS</p>
+                        <p>Next.js</p>
+                        <p>Turso (SQLite)</p>
+                        <p>Expo</p>
                     </div>
                 </div>
 
