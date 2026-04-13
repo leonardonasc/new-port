@@ -128,7 +128,7 @@ export default function Content() {
                     <div>
                         <p className="text-neutral-500 text-xs">{t("education.oracleDate")}</p>
                         <p className="text-sm">{t("education.oracle")}</p>
-                        <p className="text-sm text-neutral-500">{t("education.country")}</p>
+                        <p className="text-sm text-neutral-500">Online</p>
                     </div>
                 </div>
 
