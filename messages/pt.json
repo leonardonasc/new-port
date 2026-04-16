@@ -5,7 +5,9 @@
     "email": "Email",
     "sendEmail": "Enviar email",
     "github": "GitHub",
-    "viewGithub": "Ver Repos"
+    "viewGithub": "Ver Repos",
+    "linkedIn": "LinkedIn",
+    "viewLinkedIn": "Ver Perfil"
   },
   "projects": {
     "title": "Projetos que desenvolvi",
