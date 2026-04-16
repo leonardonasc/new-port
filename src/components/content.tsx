@@ -171,7 +171,7 @@ export default function Content() {
             >
                 <div className="w-full h-px bg-neutral-800" />
                 <h3 className="text-md text-neutral-200 font-semibold">{t("contact.title")}</h3>
-                <div className="w-full items-center flex flex-col gap-2 md:flex-row flex-1">
+                <div className="w-full items-center flex flex-col gap-3 md:flex-row flex-1">
 
                     <AnimatedButton
                         textPrimary={t("contact.email")}
