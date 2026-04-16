@@ -58,7 +58,7 @@ export default function Content() {
                 transition={{ duration: 1, delay: 0.4 }}
                 className="flex flex-col gap-y-6">
                 <h3 className="text-md text-neutral-200 font-semibold">{t("projects.title")}</h3>
-                <div className="flex flex-col sm:flex-row md:flex-row gap-y-3 md:gap-x-3 justify-between">
+                <div className="flex flex-col sm:flex-row md:flex-row gap-3 justify-between">
                     <Projects
                         title="Cardly"
                         description={t("projects.cardly.description")}
