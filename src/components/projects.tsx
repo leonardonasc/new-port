@@ -12,7 +12,7 @@ interface ProjectsProps {
 export default function Projects({ title, description, where, whereLink, stacks }: ProjectsProps) {
 
     return (
-        <div className="border border-neutral-700/40 sm:w-[32%] md:w-[45%] p-4 rounded-lg"
+        <div className="border border-neutral-700/40 sm:w-[32%] md:w-[45%] p-4"
             style={{
               
                 display: "flex",

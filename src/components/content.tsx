@@ -5,6 +5,7 @@ import Projects from "./projects";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
+import AnimatedButton from "./animated-button";
 
 export default function Content() {
     const t = useTranslations();
@@ -45,7 +46,8 @@ export default function Content() {
                         >PT</a>
                     </div>
                 </div>
-                <h2 className="text-neutral-400 text-sm">{t.rich("description", {
+                {/* todo: arrumar os leadings */}
+                <h2 className="text-neutral-400 text-sm leading-6">{t.rich("description", {
                     span: (chunks) => <span className="text-neutral-300 underline underline-offset-1">{chunks}</span>
                 })}</h2>
             </motion.div>
@@ -147,14 +149,15 @@ export default function Content() {
                         <p>TypeScript</p>
                         <p>React</p>
                         <p>AdonisJS</p>
-                        <p>Android Studio</p>
+                        <p>Expo</p>
                     </div>
                     <div className="flex-col">
                         <p>Git / GitHub</p>
+                        <p>JavaScript</p>
                         <p>Tailwind CSS</p>
                         <p>Next.js</p>
                         <p>Turso (SQLite)</p>
-                        <p>Expo</p>
+
                     </div>
                 </div>
 
@@ -163,9 +166,31 @@ export default function Content() {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 1.2 }}>
-                <div className="flex gap-x-1 items-center">
-                    <p className="text-sm">{t("contact.title")}:</p> <CopyMail /> <p>.</p>
+                transition={{ duration: 1, delay: 1.2 }}
+                className="flex flex-col gap-y-6 w-full"
+            >
+                <div className="w-full h-px bg-neutral-800" />
+                <h3 className="text-md text-neutral-200 font-semibold">{t("contact.title")}</h3>
+                <div className="w-full items-center flex flex-col gap-2 md:flex-row flex-1">
+
+                    <AnimatedButton
+                        textPrimary={t("contact.email")}
+                        textSecondary={t("contact.sendEmail")}
+                        url="mailto:leonardo.nasmt@gmail.com"
+                    />
+
+                    <AnimatedButton
+                        textPrimary={t("contact.github")}
+                        textSecondary={t("contact.viewGithub")}
+                        url="https://github.com/leonardonasc"
+                    />
+
+                    <AnimatedButton
+                        textPrimary={t("contact.linkedIn")}
+                        textSecondary={t("contact.viewLinkedIn")}
+                        url="https://linkedin.com/in/leonardownascimento"
+                    />
+
                 </div>
             </motion.div>
 
