@@ -22,7 +22,7 @@ export default function Content() {
                     lg:w-180 lg:px-0
                     xl:w-180 xl:px-0
                     2xl:w-180 2xl:px-0
-                    min-h-screen flex flex-col gap-y-12 py-25 px-10 line-clamp-2 text-neutral-300 leading-6"
+                    min-h-screen flex flex-col gap-y-12 py-25 px-10 line-clamp-2 text-neutral-300"
         >
             <motion.div
                 initial={{ opacity: 0 }}
@@ -102,7 +102,7 @@ export default function Content() {
                         </div>
                     </div>
 
-                    <p className="text-sm text-neutral-400">{t("experience.description")}</p>
+                    <p className="text-sm text-neutral-400 leading-6">{t("experience.description")}</p>
 
                 </div>
             </motion.div>
